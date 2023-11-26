@@ -1,0 +1,152 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bai_5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.Write(" Nhập điểm:");
+            float ĐTB = float.Parse(Console.ReadLine());
+            if (ĐTB >= 9)
+            {
+                Console.Write("Xuất sắc");
+            }
+            if (ĐTB < 9 & ĐTB >=8)
+    {
+                Console.Write(" Giỏi");
+            }
+            if (ĐTB < 8 & ĐTB >= 6.5)
+            {
+                Console.Write("Khá");
+            }
+            if (ĐTB < 6.5 & ĐTB >= 5)
+            {
+                Console.Write("Trung Bình");
+            }
+            if (ĐTB < 5 & ĐTB >= 3.5)
+            {
+                Console.Write(" Yếu");
+            }
+            else if (ĐTB < 3.5)
+            {
+                Console.Write(" Kém");
+            }
+            Console.ReadKey();
+        }
+    }
+
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bai_6
+{
+    internal class Program
+    {
+         static void Main(string[] args)
+        {
+            int[] menhGia = { 500000, 200000, 100000, 50000 };
+            int soTien;
+            int soLuong;
+
+            Console.Write("Nhap so tien (la boi so cua 50.000): ");
+            soTien = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("So tien " + soTien + " co the doi thanh:");
+
+            for (int i = 0; i < menhGia.Length; i++)
+            {
+                soLuong = soTien / menhGia[i];
+                soTien %= menhGia[i];
+                if (soLuong > 0)
+                {
+                    Console.WriteLine(soLuong + " to " + menhGia[i]);
+                }
+            }
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bai_7
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.Write(" Nhập số điện (kWh): ");
+            float SoDien = float.Parse(Console.ReadLine());
+
+            if (SoDien >= 1 & SoDien <= 50)
+            {
+                int GiaBan = 1484;
+
+                float TienDien = SoDien * GiaBan;
+                float TienPhaiTra = TienDien + TienDien * (10 / 100);
+                Console.Write("Tiền điện bằng :{0}", TienPhaiTra);
+            }
+            if (SoDien >= 51 & SoDien <= 100)
+            {
+                int GiaBan = 1533;
+
+                float TienDien = SoDien * GiaBan;
+                float TienPhaiTra = TienDien + TienDien * (10 / 100);
+                Console.Write("Tiền điện bằng :{0}", TienPhaiTra);
+            }
+            if (SoDien >= 101 & SoDien <= 200)
+            {
+                int GiaBan = 1786;
+
+                float TienDien = SoDien * GiaBan;
+                float TienPhaiTra = TienDien + TienDien * (10 / 100);
+                Console.Write("Tiền điện bằng :{0}", TienPhaiTra);
+            }
+            if (SoDien >= 201 & SoDien <= 300)
+            {
+                int GiaBan = 2242;
+
+                float TienDien = SoDien * GiaBan;
+                float TienPhaiTra = TienDien + TienDien * (10 / 100);
+                Console.Write("Tiền điện bằng :{0}", TienPhaiTra);
+            }
+            if (SoDien >= 301 & SoDien <= 400)
+            {
+                int GiaBan = 2503;
+
+                float TienDien = SoDien * GiaBan;
+                float TienPhaiTra = TienDien + TienDien * (10 / 100);
+                Console.Write("Tiền điện bằng :{0}", TienPhaiTra);
+            }
+            if (SoDien >= 401)
+            {
+                int GiaBan = 2587;
+
+                float TienDien = SoDien * GiaBan;
+                float TienPhaiTra = TienDien + TienDien * (10 / 100);
+                Console.Write("Tiền điện bằng :{0}", TienPhaiTra);
+            }
+
+
+            Console.ReadKey();
+        }
+    }
+}
