@@ -63,3 +63,82 @@ class Program
         }
     }
 }
+
+NHÁP:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BT5_XeLoaiDTB
+{
+    using System;
+
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Nhập vào điểm trung bình: ");
+            double diemTrungBinh = Convert.ToDouble(Console.ReadLine());
+
+            if (diemTrungBinh >= 9.0)
+            {
+                Console.WriteLine("Xuất sắc");
+            }
+            else if (diemTrungBinh >= 8.0)
+            {
+                Console.WriteLine("Giỏi");
+            }
+            else if (diemTrungBinh >= 6.5)
+            {
+                Console.WriteLine("Khá");
+            }
+            else if (diemTrungBinh >= 5.0)
+            {
+                Console.WriteLine("Trung bình");
+            }
+            else if (diemTrungBinh >= 3.5)
+            {
+                Console.WriteLine("Yếu");
+            }
+            else
+            {
+                Console.WriteLine("kém");
+            }
+        }
+    }
+
+}
+
+
+6:
+using System;
+
+namespace DoiTienMenhGia
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] menhGia = { 500000, 200000, 100000, 50000 };
+            int soTien;
+            int soLuong;
+
+            Console.Write("Nhap so tien (la boi so cua 50.000): ");
+            soTien = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("So tien " + soTien + " co the doi thanh:");
+
+            for (int i = 0; i < menhGia.Length; i++)
+            {
+                soLuong = soTien / menhGia[i];
+                soTien %= menhGia[i];
+                if (soLuong > 0)
+                {
+                    Console.WriteLine(soLuong + " to " + menhGia[i]);
+                }
+            }
+        }
+    }
+}
