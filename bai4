@@ -1,21 +1,45 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class Program
+namespace BT5_XeLoaiDTB
 {
-    static void Main()
-    {
-        
-        Console.Write("Nhập vào một năm: ");
-        int nam = Convert.ToInt32(Console.ReadLine());
+    using System;
 
-       
-        if ((nam % 4 == 0 && nam % 100 != 0) || (nam % 400 == 0))
+    class Program
+    {
+        static void Main()
         {
-            Console.WriteLine($"{nam} là năm nhuận.");
-        }
-        else
-        {
-            Console.WriteLine($"{nam} không phải là năm nhuận.");
+            Console.WriteLine("Nhập vào điểm trung bình: ");
+            double diemTrungBinh = Convert.ToDouble(Console.ReadLine());
+
+            if (diemTrungBinh >= 9.0)
+            {
+                Console.WriteLine("Xuất sắc");
+            }
+            else if (diemTrungBinh >= 8.0)
+            {
+                Console.WriteLine("Giỏi");
+            }
+            else if (diemTrungBinh >= 6.5)
+            {
+                Console.WriteLine("Khá");
+            }
+            else if (diemTrungBinh >= 5.0)
+            {
+                Console.WriteLine("Trung bình");
+            }
+            else if (diemTrungBinh >= 3.5)
+            {
+                Console.WriteLine("Yếu");
+            }
+            else
+            {
+                Console.WriteLine("kém");
+            }
         }
     }
+
 }
