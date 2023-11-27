@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Nhập vào một năm từ người dùng
+        Console.Write("Nhập vào một năm: ");
+        int nam = Convert.ToInt32(Console.ReadLine());
+
+        // Kiểm tra xem năm có phải là năm nhuận hay không
+        if ((nam % 4 == 0 && nam % 100 != 0) || (nam % 400 == 0))
+        {
+            Console.WriteLine($"{nam} là năm nhuận.");
+        }
+        else
+        {
+            Console.WriteLine($"{nam} không phải là năm nhuận.");
+        }
+    }
+}
